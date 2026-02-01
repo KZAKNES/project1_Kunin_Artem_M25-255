@@ -1,15 +1,21 @@
-[project]
+[tool.poetry]
 name = "project1-kunin-artem-m25-255"
 version = "0.1.0"
 description = ""
-authors = [
-    {name = "Your Name",email = "you@example.com"}
+authors = ["Artem Kunin <kunin.artem@example.com>"]
+
+packages = [
+    { include = "labyrinth_game" }
 ]
-requires-python = ">=3.10"
-dependencies = [
-]
+
+[tool.poetry.dependencies]
+python = ">=3.10"
 
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+project = "labyrinth_game.main:main"
+
